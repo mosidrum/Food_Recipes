@@ -16,7 +16,7 @@ function App() {
     const res = await fetch(url);
     const data = await res.json();
     console.log(data);
-    setRecipes(data.meal);
+    setRecipes(data.meals);
     setIsLoading(false);
   };
 
@@ -28,11 +28,11 @@ function App() {
     <div className='container'>
       <h1>My Recipes </h1>
       <div className="recipes">
-        { recipes ? recipes.map(recipe =>{
+        { recipes ? recipes.map(recipe =>(
           <RecipeCard
           key={recipe.idMeal}
           recipe={recipe} />
-        }) : 'NO RECIPES!'}
+        )) : 'NO RECIPES!'}
       </div>
     </div>
   );
