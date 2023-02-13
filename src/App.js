@@ -25,15 +25,25 @@ function App() {
     searchRecipes();
   }, []);
 
+  const handleSubmit = event  =>{
+    event.preventDefault();
+    searchRecipes();
+  }
+
   return (
     <div className='container'>
       <h1>My Recipes </h1>
+      < SearchBar
+      handleSubmit={handleSubmit}
+      value={query}
+      onChange={event => setQuery(event.target.value)} isLoading={isLoading}
+      />
       <div className="recipes">
         { recipes ? recipes.map(recipe =>(
           <RecipeCard
           key={recipe.idMeal}
           recipe={recipe} />
-        )) : 'NO RECIPES!'}
+        )) : 'No Recipe found for your search term!'}
       </div>
     </div>
   );
