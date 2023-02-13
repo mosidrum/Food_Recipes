@@ -5,8 +5,8 @@ const SearchBar =(
 
 ) => {
   return (
-    
-    <div>
+
+    <div className="small-phones">
       <form onSubmit={handleSubmit}>
         <input value={value} placeholder="Search Recipes" className="form-search" disabled={isLoading} onChange={onChange} />
 

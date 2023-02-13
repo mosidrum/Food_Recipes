@@ -77,11 +77,19 @@ form {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 1024px) {
-  *{
-    font-size: 16px;
+@media only screen and (max-width: 758px) {
+
+  .small-phones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
   .form-search{
-    display: none;
+    width: 100%;
+    height: 20px;
+  }
+  .submit-btn{
+    width: 30%;
+    color: #2e2b2b;
   }
 }
